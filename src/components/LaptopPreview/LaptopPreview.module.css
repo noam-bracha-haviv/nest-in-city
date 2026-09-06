@@ -1,0 +1,122 @@
+.figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Comfortable margins inside the 800px content column. */
+.laptop {
+  width: 100%;
+  max-width: 720px;
+  margin: 4px auto 0;
+}
+
+/* The lid: dark aluminium shell with a thin bezel around the screen. */
+.lid {
+  position: relative;
+  padding: 12px 12px 14px;
+  border-radius: 18px 18px 5px 5px;
+  background: linear-gradient(180deg, #3d3d40 0%, #232326 55%, #1a1a1c 100%);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.16) inset,
+    0 18px 38px rgba(0, 0, 0, 0.22);
+}
+
+.camera {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  margin-left: -2px;
+  border-radius: 50%;
+  background: #45454a;
+}
+
+/* The screen aperture — the website is clipped exactly to this box. */
+.screen {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border-radius: 6px;
+  background: var(--color-bg);
+}
+
+.site {
+  display: block;
+  border: 0;
+  transform-origin: top left;
+}
+
+/* The aluminium base, which is also the "open the real site" target.
+   Clicks inside the screen stay with the embedded document, so this never
+   competes with scrolling or interacting with the preview. */
+.base {
+  position: relative;
+  display: block;
+  width: 114%;
+  height: 15px;
+  margin: 0 0 0 -7%;
+  border-radius: 0 0 13px 13px;
+  background: linear-gradient(180deg, #d7d7d9 0%, #b9b9bd 62%, #9d9da2 100%);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+
+.notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 88px;
+  height: 5px;
+  margin-left: -44px;
+  border-radius: 0 0 6px 6px;
+  background: #a4a4a9;
+}
+
+.caption {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: var(--fs-caption);
+  line-height: var(--lh-caption);
+}
+
+.captionLink {
+  color: var(--color-link-blue);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.captionLink:hover {
+  text-decoration: underline;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .lid {
+    padding: 8px 8px 10px;
+    border-radius: 12px 12px 4px 4px;
+  }
+
+  .base {
+    height: 11px;
+    width: 110%;
+    margin-left: -5%;
+  }
+
+  .notch {
+    width: 60px;
+    margin-left: -30px;
+    height: 4px;
+  }
+}

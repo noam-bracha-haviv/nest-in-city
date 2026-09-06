@@ -1,5 +1,5 @@
 import CaseStudySection from '../components/CaseStudySection/CaseStudySection';
-import { HighlightCTA } from '../components/Highlight/Highlight';
+import LaptopPreview from '../components/LaptopPreview/LaptopPreview';
 import { LINKS } from '../data/links';
 
 export default function DigitalExtensionSection() {
@@ -13,9 +13,11 @@ export default function DigitalExtensionSection() {
         envisions an online experience for discovering workshops and
         exploring the product collection.
       </p>
-      <HighlightCTA href={LINKS.websiteConcept}>
-        &rarr; View the Website Concept
-      </HighlightCTA>
+      <LaptopPreview
+        src={LINKS.websiteConcept}
+        title="Nest in City concept website, running live"
+        openLabel="Open the live website"
+      />
     </CaseStudySection>
   );
 }
