@@ -26,7 +26,7 @@ export default function TopBar() {
         <button
           type="button"
           className={styles.back}
-          onClick={() => window.location.assign('https://spellomusicapp-ai.github.io/new-portfolio/')}
+          onClick={() => window.location.assign('https://noam-bracha-haviv.github.io/new-portfolio/')}
         >
           <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path
